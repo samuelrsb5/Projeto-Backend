@@ -1,0 +1,15 @@
+<nav class="nav-bar">
+    <a routerLink="/home" class="item" routerLinkActive="active">Home</a>
+    <a routerLink="/cadastrar" class="item" routerLinkActive="active">Cadastro</a>
+    <a class="item" (click)="toggleMenu()">Filter</a>
+    <figure class="logo-container">
+      <!-- <img class="logo" src="../../../assets/img/logoApex.png" alt=""> -->
+    </figure>
+    <ul *ngIf="menuVisible" class="dropdown-menu">
+      <li (click)="selectCategory('all')">Tudo</li>
+      <li (click)="selectCategory('electronics')">Eletrônicos</li>
+      <li (click)="selectCategory('jewelery')">Bijuterias</li>
+      <li (click)="selectCategory('men\'s clothing')">Moda Masculina</li>
+      <li (click)="selectCategory('women\'s clothing')">Moda Feminina</li>
+    </ul>
+  </nav>
